@@ -1,0 +1,16 @@
+vendor
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+
+node_modules
+.env
+.env.back
+.idea*
+.DS_Store
+/storage/
+/node_modules/
+package-lock.json
+public
+*/.DS_STORE
+**/.DS_STORE

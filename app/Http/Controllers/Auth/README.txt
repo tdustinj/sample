@@ -1,0 +1,3 @@
+These Controllers and Thier Routes are used for web login to api-ospos.walts.com.
+They are not used for calling authencating againest the api from a remote app like
+ospos-web or ospos-native etc...

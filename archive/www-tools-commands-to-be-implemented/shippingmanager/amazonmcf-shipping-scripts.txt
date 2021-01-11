@@ -1,0 +1,49 @@
+*OAF = orders_amazon_fulfillment table
+*ST = shipping_transactions table
+
+Item gets MC'd, record is inserted into OAF with all info sent to Amazon.  Initial amazon_fulfillment_status = SENT, shipping_transactions_table = "NOT_UPDATED"
+Matching record is also inserted into ST table, fulfillment_shipment_status = "NOT SHIPPED", platform_updated_status = "NOT_UPDATED"
+and customer_tracking_sent = "NOT_EMAILED"
+
+1 - RequestAmazonMultiChannelFulfillmentTrackingInformationCommand	(Running)
+	
+	Query OAF for all amazon multi channel orders where status = "Sent" and amazon_fulfillment_status != "CANCELLED" OR "SHIPPED"
+	Send those orders to Amazon via API to request shipping info
+	If info is available from Amazon update OAF with shipment id, package #, carrier code and tracking #
+	Set OAF->amazon_fulfillment_status = "COMPLETE", OAF->status = "SHIPPED"
+
+2 - UpdateShippingTransactionsWithTrackingFromMultiChannelOrdersCommand	(Running)
+
+	Query all OAF where amazon_fulfillment_status = "COMPLETE" and where shipping_transactions_table != "UPDATED"
+	For each matching ST record, update it with all tracking info from OAF table, set ST->fulfillment_shipment_status to "SHIPPED"
+	Set OAF->shipping_transactions_table = "UPDATED"
+	Insert tracking url into messages table
+
+3 - UpdateShippingInformationForAmazonOrdersCommand	(Running)
+
+	(For orders that were multi-channeled, the ST table will be updated via API. For other orders, information is manually entered into the ST table via the grey 
+	box and order_status set to "Shipped" which will in turn update ST->fulfillment_shipment_status to "SHIPPED")
+
+	Query ST's where platform_updated_status = "NOT_UPDATED", fulfillment_shipment_status = "SHIPPED" and partner = "Amazon"
+	Send XML feed to Amazon containing updated tracking info
+	Store request body and request id in amazon_reports table
+	Set OAF->status = "PLATFORM_UPDATED"
+
+4 - EmailCustomerTrackingInfoCommand	(Running)
+
+	Query all ST where fulfillment_shipment_status = "SHIPPED" and customer_tracking_sent = "NOT_EMAILED"
+	Make sure all items on same invoice have shipped
+	Email to ship_id
+	Update fulfillment_shipment_status = "SHIPPED" for all matching invoice #s in ST and update customer_tracking_sent = "EMAILED"
+	Insert "Shipping info email sent to customer" into messages table
+	Set OAF->status = "CUSTOMER_EMAILED"
+
+
+
+5 - GetFeedResultsAmazonShippingUploadCommand	(Running)
+
+	Update ST->platform_updated_status to either "Error" Or "UPDATED"
+
+
+
+005794535661243

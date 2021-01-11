@@ -1,0 +1,201 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v13="http://fedex.com/ws/openship/v13">
+   <soapenv:Header>
+   </soapenv:Header>
+   <soapenv:Body>
+       <v13:ConfirmConsolidationRequest>
+       <v13:WebAuthenticationDetail>
+            <v13:UserCredential>
+               <v13:Key>Input Your Information</v13:Key>
+               <v13:Password>Input Your Information</v13:Password>
+            </v13:UserCredential>
+         </v13:WebAuthenticationDetail>
+         <v13:ClientDetail>
+            <v13:AccountNumber>Input Your Information</v13:AccountNumber>
+            <v13:MeterNumber>Input Your Information</v13:MeterNumber>
+            <v13:IntegratorId>123</v13:IntegratorId>
+            <v13:Localization>
+               <v13:LanguageCode>EN</v13:LanguageCode>
+               <v13:LocaleCode>us</v13:LocaleCode>
+            </v13:Localization>
+         </v13:ClientDetail>
+         <v13:TransactionDetail>
+            <v13:CustomerTransactionId>ConfirmConsolidationRequest_v13</v13:CustomerTransactionId>
+            <v13:Localization>
+               <v13:LanguageCode>EN</v13:LanguageCode>
+               <v13:LocaleCode>us</v13:LocaleCode>
+            </v13:Localization>
+         </v13:TransactionDetail>
+         <v13:Version>
+            <v13:ServiceId>ship</v13:ServiceId>
+            <v13:Major>13</v13:Major>
+            <v13:Intermediate>0</v13:Intermediate>
+            <v13:Minor>0</v13:Minor>
+         </v13:Version>
+         <v13:AsynchronousProcessingOptions>
+            <v13:Options>ALLOW_ASYNCHRONOUS</v13:Options>
+         </v13:AsynchronousProcessingOptions>
+          <v13:ConsolidationKey>
+            <v13:Type>INTERNATIONAL_PRIORITY_DISTRIBUTION</v13:Type>
+            <v13:Index>Input Your Information</v13:Index>
+            <v13:Date>2014-05-26</v13:Date>
+         </v13:ConsolidationKey>
+         <v13:LabelSpecification>
+            <v13:LabelFormatType>COMMON2D</v13:LabelFormatType>
+            <v13:ImageType>PNG</v13:ImageType>
+            <v13:LabelStockType>PAPER_4X6</v13:LabelStockType>
+            <v13:LabelPrintingOrientation>TOP_EDGE_OF_TEXT_FIRST</v13:LabelPrintingOrientation>
+         </v13:LabelSpecification>
+         <v13:RateRequestTypes>LIST</v13:RateRequestTypes>
+         <v13:EdtRequestType>ALL</v13:EdtRequestType>
+      </v13:ConfirmConsolidationRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Out:
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <soapenv:Body>
+      <v13:ConfirmConsolidationReply xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:v13="http://fedex.com/ws/openship/v13">
+          <v13:HighestSeverity>SUCCESS</v13:HighestSeverity>
+         <v13:Notifications>
+            <v13:Severity>SUCCESS</v13:Severity>
+            <v13:Source>ship</v13:Source>
+            <v13:Code>0000</v13:Code>
+            <v13:Message>Success</v13:Message>
+            <v13:LocalizedMessage>Success</v13:LocalizedMessage>
+         </v13:Notifications>
+         <v13:TransactionDetail>
+            <v13:CustomerTransactionId>ConfirmConsolidationRequest_v13</v13:CustomerTransactionId>
+            <v13:Localization>
+               <v13:LanguageCode>EN</v13:LanguageCode>
+               <v13:LocaleCode>en</v13:LocaleCode>
+            </v13:Localization>
+         </v13:TransactionDetail>
+         <v13:Version>
+            <v13:ServiceId>ship</v13:ServiceId>
+            <v13:Major>13</v13:Major>
+            <v13:Intermediate>0</v13:Intermediate>
+            <v13:Minor>0</v13:Minor>
+         </v13:Version>
+         <v13:JobId>Input Your Information</v13:JobId>
+         <v13:AsynchronousProcessingResults>
+            <v13:Options>ASYNCHRONOUSLY_PROCESSED</v13:Options>
+         </v13:AsynchronousProcessingResults>
+         <v13:CompletedConsolidationDetail>
+            <v13:ConsolidationShipments>
+               <v13:ShipmentRoleType>MASTER_AIRWAYBILL_SHIPMENT</v13:ShipmentRoleType>
+               <v13:RequestedShipment>
+                  <v13:ShipTimestamp>2015-03-04T00:00:00-00:00</v13:ShipTimestamp>
+                  <v13:DropoffType>REGULAR_PICKUP</v13:DropoffType>
+                  <v13:ServiceType>INTERNATIONAL_PRIORITY_DISTRIBUTION</v13:ServiceType>
+                  <v13:PackagingType>YOUR_PACKAGING</v13:PackagingType>
+                  <v13:TotalWeight>
+                     <v13:Units>LB</v13:Units>
+                     <v13:Value>250.0</v13:Value>
+                  </v13:TotalWeight>
+                  <v13:TotalDimensions>
+                     <v13:Length>12</v13:Length>
+                     <v13:Width>12</v13:Width>
+                     <v13:Height>12</v13:Height>
+                     <v13:Units>IN</v13:Units>
+                  </v13:TotalDimensions>
+                  <v13:Shipper>
+                     <v13:AccountNumber>Input Your Information</v13:AccountNumber>
+                     <v13:Tins>
+                        <v13:TinType>BUSINESS_NATIONAL</v13:TinType>
+                        <v13:Number>INDIVIDUAL</v13:Number>
+                     </v13:Tins>
+                     <v13:Contact>
+                        <v13:PersonName>AMAR</v13:PersonName>
+                        <v13:CompanyName>SYNTEL</v13:CompanyName>
+                        <v13:PhoneNumber>1234567890</v13:PhoneNumber>
+                        <v13:EMailAddress>Amarnadh_Chennmsetti@syntelinc.com</v13:EMailAddress>
+                     </v13:Contact>
+                     <v13:Address>
+                        <v13:StreetLines>2 INTERNATIONAL PL</v13:StreetLines>
+                        <v13:StreetLines>IPD TESTING FXRS</v13:StreetLines>
+                        <v13:City>BOSTON</v13:City>
+                        <v13:StateOrProvinceCode>MA</v13:StateOrProvinceCode>
+                        <v13:PostalCode>02110</v13:PostalCode>
+                        <v13:CountryCode>US</v13:CountryCode>
+                        <v13:Residential>false</v13:Residential>
+                     </v13:Address>
+                  </v13:Shipper>
+                  <v13:Recipient>
+                     <v13:Contact>
+                        <v13:PersonName>via FEDEX IPD</v13:PersonName>
+                        <v13:PhoneNumber>4504757001</v13:PhoneNumber>
+                     </v13:Contact>
+                     <v13:Address>
+                        <v13:StreetLines>@12005 RAYMONDE-DE-LA-ROCHE</v13:StreetLines>
+                        <v13:City>MIRABEL</v13:City>
+                        <v13:StateOrProvinceCode>PQ</v13:StateOrProvinceCode>
+                        <v13:PostalCode>H9Z8Z8</v13:PostalCode>
+                        <v13:CountryCode>CA</v13:CountryCode>
+                        <v13:Residential>false</v13:Residential>
+                     </v13:Address>
+                  </v13:Recipient>
+                  <v13:Origin>
+                     <v13:Contact>
+                        <v13:PersonName>Input Your Information</v13:PersonName>
+                        <v13:CompanyName>Input Your Information</v13:CompanyName>
+                        <v13:PhoneNumber>Input Your Information</v13:PhoneNumber>
+                        <v13:EMailAddress>Input Your Information</v13:EMailAddress>
+                     </v13:Contact>
+                     <v13:Address>
+                        <v13:StreetLines>Input Your Information</v13:StreetLines>
+                        <v13:StreetLines>Input Your Information</v13:StreetLines>
+                        <v13:City>BOSTON</v13:City>
+                        <v13:StateOrProvinceCode>MA</v13:StateOrProvinceCode>
+                        <v13:PostalCode>02110</v13:PostalCode>
+                        <v13:CountryCode>US</v13:CountryCode>
+                        <v13:Residential>false</v13:Residential>
+                     </v13:Address>
+                  </v13:Origin>
+                  <v13:ShippingChargesPayment>
+                     <v13:PaymentType>SENDER</v13:PaymentType>
+                     <v13:Payor>
+                        <v13:ResponsibleParty>
+                           <v13:AccountNumber>Input Your Information</v13:AccountNumber>
+                           <v13:Contact>
+                              <v13:PersonName>Input Your Information</v13:PersonName>
+                              <v13:CompanyName>Input Your Information</v13:CompanyName>
+                              <v13:PhoneNumber>Input Your Information</v13:PhoneNumber>
+                              <v13:EMailAddress>Input Your Information</v13:EMailAddress>
+                           </v13:Contact>
+                           <v13:Address>
+                              <v13:StreetLines>Input Your Information</v13:StreetLines>
+                              <v13:StreetLines>Input Your Information</v13:StreetLines>
+                              <v13:City>BOSTON</v13:City>
+                              <v13:StateOrProvinceCode>MA</v13:StateOrProvinceCode>
+                              <v13:PostalCode>021104101</v13:PostalCode>
+                              <v13:CountryCode>US</v13:CountryCode>
+                              <v13:Residential>false</v13:Residential>
+                           </v13:Address>
+                        </v13:ResponsibleParty>
+                     </v13:Payor>
+                  </v13:ShippingChargesPayment>
+                  <v13:ConsolidationDetail>
+                     <v13:RelationshipTimestamp>2015-03-04T07:27:02-05:00</v13:RelationshipTimestamp>
+                     <v13:Type>INTERNATIONAL_PRIORITY_DISTRIBUTION</v13:Type>
+                     <v13:Role>MASTER_AIRWAYBILL_SHIPMENT</v13:Role>
+                     <v13:InternationalDistributionDetail>
+                        <v13:SummaryDetail>
+                           <v13:TotalWeight>
+                              <v13:Units>LB</v13:Units>
+                              <v13:Value>250.0</v13:Value>
+                           </v13:TotalWeight>
+                           <v13:TotalPackageCount>5</v13:TotalPackageCount>
+                           <v13:TotalUniqueAddressCount>1</v13:TotalUniqueAddressCount>
+                           <v13:TotalCustomsValue>
+                              <v13:Currency>USD</v13:Currency>
+                              <v13:Amount>2500.0</v13:Amount>
+                           </v13:TotalCustomsValue>
+                        </v13:SummaryDetail>
+                     </v13:InternationalDistributionDetail>
+                  </v13:ConsolidationDetail>
+                  <v13:CustomsClearanceDetail>
+                     <v13:CustomsOptions>
+                        <v13:Type>OTHER</v13:Type>
+                        <v13:Description>Consolidatedproduct</v13:Description>

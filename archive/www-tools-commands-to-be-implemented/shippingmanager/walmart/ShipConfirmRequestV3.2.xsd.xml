@@ -1,0 +1,30 @@
+<ord:orderShipment xmlns:ord="http://walmart.com/mp/v3/orders">
+  <ord:orderLines>
+    <!--1 or more repetitions:-->
+    <ord:orderLine>
+      <ord:lineNumber>string</ord:lineNumber>
+      <ord:orderLineStatuses>
+        <!--1 or more repetitions:-->
+        <ord:orderLineStatus>
+          <ord:status>Created</ord:status>
+          <ord:statusQuantity>
+            <ord:unitOfMeasurement>string</ord:unitOfMeasurement>
+            <ord:amount>string</ord:amount>
+          </ord:statusQuantity>
+          <ord:trackingInfo>
+            <ord:shipDateTime>2007-10-25T23:36:28</ord:shipDateTime>
+            <ord:carrierName>
+              <!--You have a CHOICE of the next 2 items at this level-->
+              <ord:otherCarrier>string</ord:otherCarrier>
+              <ord:carrier>UPSMI</ord:carrier>
+            </ord:carrierName>
+            <ord:methodCode>WhiteGlove</ord:methodCode>
+            <ord:trackingNumber>string</ord:trackingNumber>
+            <!--Optional:-->
+            <ord:trackingURL>string</ord:trackingURL>
+          </ord:trackingInfo>
+        </ord:orderLineStatus>
+      </ord:orderLineStatuses>
+    </ord:orderLine>
+  </ord:orderLines>
+</ord:orderShipment>

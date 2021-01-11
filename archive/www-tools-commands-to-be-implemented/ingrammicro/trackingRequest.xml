@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><OrderTrackingRequest>
+    <Version>2.0</Version>
+    <TransactionHeader>
+        <SenderID>MD</SenderID>
+        <ReceiverID>WALTS</ReceiverID>
+        <CountryCode>MD</CountryCode>
+        <LoginID>XmLuiDWtvS</LoginID>
+        <Password>Hen18jWgQi</Password>
+    </TransactionHeader>
+    <TrackingRequestHeader>
+        <CustomerPO>8986</CustomerPO>
+    </TrackingRequestHeader>
+
+</OrderTrackingRequest>

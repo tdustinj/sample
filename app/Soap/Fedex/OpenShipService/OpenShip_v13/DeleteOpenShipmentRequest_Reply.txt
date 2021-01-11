@@ -1,0 +1,70 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v13="http://fedex.com/ws/openship/v13">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v13:DeleteOpenShipmentRequest>
+         <v13:WebAuthenticationDetail>
+            <v13:ParentCredential>
+               <v13:Key>RZEndj3VoTN7IZPr</v13:Key>
+               <v13:Password>FyOhzHVSNhQOhGlOoT7R5DRAW</v13:Password>
+            </v13:ParentCredential>
+            <v13:UserCredential>
+               <v13:Key>IwxibuPidazmPdWY</v13:Key>
+               <v13:Password>lqPWoVeWGAFboqFOtiBU9qfCy</v13:Password>
+            </v13:UserCredential>
+         </v13:WebAuthenticationDetail>
+         <v13:ClientDetail>
+            <v13:AccountNumber>606503768</v13:AccountNumber>
+            <v13:MeterNumber>100243452</v13:MeterNumber>
+            <v13:Localization>
+               <v13:LanguageCode>EN</v13:LanguageCode>
+               <v13:LocaleCode>us</v13:LocaleCode>
+            </v13:Localization>
+         </v13:ClientDetail>
+         <v13:TransactionDetail>
+            <v13:CustomerTransactionId>DeleteOpenShipment_v7</v13:CustomerTransactionId>
+            <v13:Localization>
+               <v13:LanguageCode>EN</v13:LanguageCode>
+               <v13:LocaleCode>us</v13:LocaleCode>
+            </v13:Localization>
+         </v13:TransactionDetail>
+         <v13:Version>
+            <v13:ServiceId>ship</v13:ServiceId>
+            <v13:Major>13</v13:Major>
+            <v13:Intermediate>0</v13:Intermediate>
+            <v13:Minor>0</v13:Minor>
+         </v13:Version>
+         <v13:Index>SSS44G</v13:Index>
+      </v13:DeleteOpenShipmentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Out:
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <DeleteOpenShipmentReply xmlns="http://fedex.com/ws/openship/v13">
+         <HighestSeverity>SUCCESS</HighestSeverity>
+         <Notifications>
+            <Severity>SUCCESS</Severity>
+            <Source>ship</Source>
+            <Code>0000</Code>
+            <Message>Success</Message>
+            <LocalizedMessage>Success</LocalizedMessage>
+         </Notifications>
+         <TransactionDetail>
+            <CustomerTransactionId>DeleteOpenShipment_v7</CustomerTransactionId>
+            <Localization>
+               <LanguageCode>EN</LanguageCode>
+               <LocaleCode>us</LocaleCode>
+            </Localization>
+         </TransactionDetail>
+         <Version>
+            <ServiceId>ship</ServiceId>
+            <Major>13</Major>
+            <Intermediate>0</Intermediate>
+            <Minor>0</Minor>
+         </Version>
+      </DeleteOpenShipmentReply>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

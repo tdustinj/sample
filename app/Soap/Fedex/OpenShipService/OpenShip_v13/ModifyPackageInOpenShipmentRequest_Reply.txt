@@ -1,0 +1,160 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v13="http://fedex.com/ws/openship/v13">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v13:ModifyPackageInOpenShipmentRequest>
+         <v13:WebAuthenticationDetail>
+            <v13:ParentCredential>
+               <v13:Key>Input your Information</v13:Key>
+               <v13:Password>Input your Information</v13:Password>
+            </v13:ParentCredential>
+            <v13:UserCredential>
+               <v13:Key>Input your Information</v13:Key>
+               <v13:Password>Input your Information</v13:Password>
+            </v13:UserCredential>
+         </v13:WebAuthenticationDetail>
+         <v13:ClientDetail>
+            <v13:AccountNumber>Input your Information</v13:AccountNumber>
+            <v13:MeterNumber>Input your Information</v13:MeterNumber>
+            <v13:Localization>
+               <v13:LanguageCode>EN</v13:LanguageCode>
+               <v13:LocaleCode>en</v13:LocaleCode>
+            </v13:Localization>
+         </v13:ClientDetail>
+         <v13:TransactionDetail>
+            <v13:CustomerTransactionId>ModifyPackageInOpenShipmentRequest_v13</v13:CustomerTransactionId>
+            <v13:Localization>
+               <v13:LanguageCode>EN</v13:LanguageCode>
+               <v13:LocaleCode>en</v13:LocaleCode>
+            </v13:Localization>
+         </v13:TransactionDetail>
+         <v13:Version>
+            <v13:ServiceId>ship</v13:ServiceId>
+            <v13:Major>13</v13:Major>
+            <v13:Intermediate>0</v13:Intermediate>
+            <v13:Minor>0</v13:Minor>
+         </v13:Version>
+         <v13:Index>Input your Information</v13:Index>
+         <v13:TrackingId>
+            <v13:TrackingNumber>Input your Information</v13:TrackingNumber>
+         </v13:TrackingId>
+         <v13:RequestedPackageLineItem>
+            <v13:SequenceNumber>1</v13:SequenceNumber>
+            <v13:VariableHandlingChargeDetail>
+               <v13:FixedValue>
+                  <v13:Currency>USD</v13:Currency>
+                  <v13:Amount>121</v13:Amount>
+               </v13:FixedValue>
+               <v13:PercentValue>1</v13:PercentValue>
+               <v13:RateElementBasis>BASE_CHARGE</v13:RateElementBasis>
+               <v13:RateTypeBasis>ACCOUNT</v13:RateTypeBasis>
+            </v13:VariableHandlingChargeDetail>
+            <v13:InsuredValue>
+               <v13:Currency>USD</v13:Currency>
+               <v13:Amount>100.00</v13:Amount>
+            </v13:InsuredValue>
+            <v13:Weight>
+               <v13:Units>LB</v13:Units>
+               <v13:Value>20.00</v13:Value>
+            </v13:Weight>
+            <v13:Dimensions>
+               <v13:Length>108</v13:Length>
+               <v13:Width>5</v13:Width>
+               <v13:Height>5</v13:Height>
+               <v13:Units>IN</v13:Units>
+            </v13:Dimensions>
+            <v13:ContentRecords>
+               <v13:PartNumber>121</v13:PartNumber>
+               <v13:ItemNumber>1</v13:ItemNumber>
+               <v13:ReceivedQuantity>10</v13:ReceivedQuantity>
+               <v13:Description>111</v13:Description>
+            </v13:ContentRecords>
+         </v13:RequestedPackageLineItem>
+      </v13:ModifyPackageInOpenShipmentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Out:
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <soapenv:Body>
+      <v13:ModifyPackageInOpenShipmentReply xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:v13="http://fedex.com/ws/openship/v13">
+         <v13:HighestSeverity>SUCCESS</v13:HighestSeverity>
+         <v13:Notifications>
+            <v13:Severity>SUCCESS</v13:Severity>
+            <v13:Source>ship</v13:Source>
+            <v13:Code>0000</v13:Code>
+            <v13:Message>Success</v13:Message>
+            <v13:LocalizedMessage>Success</v13:LocalizedMessage>
+         </v13:Notifications>
+         <v13:TransactionDetail>
+            <v13:CustomerTransactionId>ModifyPackageInOpenShipmentRequest_v7</v13:CustomerTransactionId>
+            <v13:Localization>
+               <v13:LanguageCode>EN</v13:LanguageCode>
+               <v13:LocaleCode>us</v13:LocaleCode>
+            </v13:Localization>
+         </v13:TransactionDetail>
+         <v13:Version>
+            <v13:ServiceId>ship</v13:ServiceId>
+            <v13:Major>13</v13:Major>
+            <v13:Intermediate>0</v13:Intermediate>
+            <v13:Minor>0</v13:Minor>
+         </v13:Version>
+         <v13:JobId>205e615d0057faq12756j032312</v13:JobId>
+         <v13:CompletedShipmentDetail>
+            <v13:UsDomestic>false</v13:UsDomestic>
+            <v13:CarrierCode>FDXE</v13:CarrierCode>
+            <v13:MasterTrackingId>
+               <v13:TrackingIdType>FEDEX</v13:TrackingIdType>
+               <v13:FormId>0430</v13:FormId>
+               <v13:TrackingNumber>Input Your Information</v13:TrackingNumber>
+            </v13:MasterTrackingId>
+            <v13:CompletedPackageDetails>
+               <v13:SequenceNumber>1</v13:SequenceNumber>
+               <v13:TrackingIds>
+                  <v13:TrackingIdType>FEDEX</v13:TrackingIdType>
+                  <v13:FormId>0430</v13:FormId>
+                  <v13:TrackingNumber>Input Your Information</v13:TrackingNumber>
+               </v13:TrackingIds>
+               <v13:GroupNumber>0</v13:GroupNumber>
+            </v13:CompletedPackageDetails>
+            <v13:CompletedPackageDetails>
+               <v13:SequenceNumber>2</v13:SequenceNumber>
+               <v13:TrackingIds>
+                  <v13:TrackingIdType>FEDEX</v13:TrackingIdType>
+                  <v13:FormId>0441</v13:FormId>
+                  <v13:TrackingNumber>Input Your Information</v13:TrackingNumber>
+               </v13:TrackingIds>
+               <v13:GroupNumber>0</v13:GroupNumber>
+            </v13:CompletedPackageDetails>
+            <v13:CompletedPackageDetails>
+               <v13:SequenceNumber>3</v13:SequenceNumber>
+               <v13:TrackingIds>
+                  <v13:TrackingIdType>FEDEX</v13:TrackingIdType>
+                  <v13:FormId>0441</v13:FormId>
+                  <v13:TrackingNumber>Input Your Information</v13:TrackingNumber>
+               </v13:TrackingIds>
+               <v13:GroupNumber>0</v13:GroupNumber>
+            </v13:CompletedPackageDetails>
+            <v13:CompletedPackageDetails>
+               <v13:SequenceNumber>4</v13:SequenceNumber>
+               <v13:TrackingIds>
+                  <v13:TrackingIdType>FEDEX</v13:TrackingIdType>
+                  <v13:FormId>0441</v13:FormId>
+                  <v13:TrackingNumber>Input Your Information</v13:TrackingNumber>
+               </v13:TrackingIds>
+               <v13:GroupNumber>0</v13:GroupNumber>
+            </v13:CompletedPackageDetails>
+            <v13:CompletedPackageDetails>
+               <v13:SequenceNumber>5</v13:SequenceNumber>
+               <v13:TrackingIds>
+                  <v13:TrackingIdType>FEDEX</v13:TrackingIdType>
+                  <v13:FormId>0441</v13:FormId>
+                  <v13:TrackingNumber>Input Your Information</v13:TrackingNumber>
+               </v13:TrackingIds>
+               <v13:GroupNumber>0</v13:GroupNumber>
+            </v13:CompletedPackageDetails>
+         </v13:CompletedShipmentDetail>
+      </v13:ModifyPackageInOpenShipmentReply>
+   </soapenv:Body>
+</soapenv:Envelope>
