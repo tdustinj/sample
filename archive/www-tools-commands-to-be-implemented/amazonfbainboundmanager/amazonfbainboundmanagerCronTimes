@@ -1,6 +1,0 @@
-0 2 * * * /usr/bin/php /usr/share/nginx/html/www-tools/artisan   command:check-amazon-fba-inbound-shipments-closed
-0 */2 * * * /usr/bin/php /usr/share/nginx/html/www-tools/artisan command:get-amazon-fba-inbound-shipments
-10 */2 * * * /usr/bin/php /usr/share/nginx/html/www-tools/artisan command:get-amazon-fba-inbound-shipments-items
-15 */2 * * * /usr/bin/php /usr/share/nginx/html/www-tools/artisan command:get-amazon-fba-inbound-shipments-shipping
-20 */2 * * * /usr/bin/php /usr/share/nginx/html/www-tools/artisan command:update-amazon-fba-inbound-shipments
-25 */2 * * * /usr/bin/php /usr/share/nginx/html/www-tools/artisan command:update-amazon-fba-inbound-shipments-items
